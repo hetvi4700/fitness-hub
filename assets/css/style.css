@@ -1464,7 +1464,11 @@ body {
    * BLOG
    */
 
-  .blog-card { padding: 45px; }
+  .blog-card { padding: 45px;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 0.6s; }
 
   .blog-card .publish-date {
     width: 80px;
@@ -1479,4 +1483,33 @@ body {
 
   .footer-top .container { column-gap: 100px; }
 
+  
+}
+
+.flip-card:hover .blog-card {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+ padding: 45px;
+  backface-visibility: hidden;
+}
+
+
+
+.flip-card-back {
+
+  transform: rotateY(180deg);
+  
+}
+.flip-card {
+  perspective: 1000px;
+  
+}
+
+#grid-list
+{
+  display: flex;
+  justify-content: center;
 }

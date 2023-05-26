@@ -1,0 +1,45 @@
+.card-slider {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .cards {
+    display: flex;
+    width: fit-content;
+    transition: transform 0.5s;
+  }
+  
+  .card {
+    flex: 0 0 200px;
+    height: 200px;
+    background-color: #f2f2f2;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  .btn-prev,
+  .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-prev {
+    left: 10px;
+  }
+  
+  .btn-next {
+    right: 10px;
+  }
+  
